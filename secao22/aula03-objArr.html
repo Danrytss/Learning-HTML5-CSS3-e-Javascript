@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="output"></div>
+    <script>
+
+        var produtos = [
+            {'Nome':'Caderno','Preco': 10 , 'Estoque': 50},
+            {'Nome':'Mochila','Preco': 23.50 , 'Estoque':45},
+            {'Nome':'Régua','Preco': 3.75 , 'Estoque': 60},
+            {'Nome':'Caneta','Preco': 2.10 , 'Estoque':55},
+            {'Nome':'Lápis','Preco': 1.2 , 'Estoque': 120},
+            {'Nome':'Borracha','Preco': 0.70 , 'Estoque': 60},
+            {'Nome':'Marca-texto verde','Preco': 4.30 , 'Estoque': 25},
+            {'Nome':'Pen-drive 16gb','Preco': 40 , 'Estoque': 15}
+        ];
+
+        var msg = '';
+
+        for(var i = 0; i<produtos.length;i++) {
+            console.log(produtos[i].Preco)
+
+            msg += '<h2>Produto: ' + produtos[i].Nome + '</h2>';
+            msg += 'Valor: ' + produtos[i].Preco+ '<br>';
+            msg += 'Estoque: ' + produtos[i].Estoque + '<br>';
+        }
+
+        document.querySelector('#output').innerHTML=msg;
+    </script>
+</body>
+</html>

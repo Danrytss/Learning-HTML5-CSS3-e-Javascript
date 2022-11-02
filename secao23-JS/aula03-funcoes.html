@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //literal
+        function somar (n1,n2/*local onde passo parametros*/) /*obs:nome da função é opcional*/ {
+            //corpo da função
+            return n1 + n2;
+
+        }
+
+        var soma = somar(10,20);
+        console.log('Resultado: ', soma)
+
+        somar.teste = 'Propriedade da função'
+        
+        console.log(somar.teste);
+
+        var teste = function(str) {
+            console.log('Teste: ', str);
+        };
+
+        teste('Bye, see you later!');
+
+        
+    </script>
+</body>
+</html>

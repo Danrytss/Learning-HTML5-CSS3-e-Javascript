@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        function embaralharPalavra (palavra) {
+            const letrasNaOrdem = palavra.split('')
+            const letrasEmbaralhadas = []
+
+            while(letrasNaOrdem.length) {
+                const sorteado = parseInt( Math.random() * letrasNaOrdem.length)
+                const letraSelecionada = letrasNaOrdem.splice(sorteado, 1)[0]
+                letrasEmbaralhadas.push(letraSelecionada)
+            }     
+            
+            return letrasEmbaralhadas.join('')
+        }
+
+        //const palavra = 'javascript'
+       
+
+        console.log(embaralharPalavra('javascript'))
+        console.log(embaralharPalavra('html'))
+        console.log(embaralharPalavra('css'))
+
+       /* letrasNaOrdem.lenght = 10
+
+        Math.random = 0.99
+
+        9.99
+
+        parseInt(9.999) = 9 */
+    </script>
+</body>
+</html>

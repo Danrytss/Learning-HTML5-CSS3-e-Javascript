@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var dados = new Array();
+        var media = 0, mediaGeral=0;
+
+        dados[0]= ['Aluno 1', 7,8,7,8];
+        dados[1]= ['Aluno 2', 9,9,7,7];
+        dados[2]= ['Aluno 3', 8,9,10,10];
+        dados[3]= ['Aluno 4', 9,9,10,6];
+
+        for(var i = 0; i < dados.length; i++) {
+
+            var mediaAluno = (dados[i][1]+dados[i][2]+dados[i][3]) / (dados[i].length -1);
+
+            media += mediaAluno;
+
+            document.write(dados[i][0]+ ' / Média: ' + mediaAluno.toFixed(2) + '<br>');
+        }
+
+        mediaGeral = media/dados.length;
+
+        document.write('Média Geral : ' + mediaGeral.toFixed(2));
+ 
+    </script>
+</body>
+</html>

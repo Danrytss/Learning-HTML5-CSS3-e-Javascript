@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .cardContainer{
+            display: flex ;
+        }
+
+        .cardFlex{
+            border: 1px solid black;
+            width: 30%;
+            padding: 30px;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cardFlex p{
+            flex-grow: 1;
+        }
+
+        .cardFlex button{
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>Display Flex</h2>
+
+    <section class="cardContainer">
+        <article class="cardFlex">
+            <h3>Title</h3>
+            <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+            <button><a href="https://uol.com.br" target="_blank">GO</a></button>
+        </article>
+
+        <article class="cardFlex">
+            <h3>Title</h3>
+            <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+            <button>GO</button>
+        </article>
+
+        <article class="cardFlex">
+            <h3>Title</h3>
+            <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+            <button>Go</button>
+        </article>
+    </section>
+</body>
+</html>

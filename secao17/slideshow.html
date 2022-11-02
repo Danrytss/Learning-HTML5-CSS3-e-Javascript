@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            font-family: sans-serif;
+            color:white;
+            background: rgb(54, 52, 52);
+        }
+
+        /* @keyframes slideShow{
+            0%{
+                transform: translateY(0vh);
+            }
+            25%{
+                transform: translateY(-50vh);
+            }
+            75%{
+                transform: translateY(-100vh);
+            }
+            100%{
+                transform: translateY(-150vh);
+            }
+        } */
+
+        @keyframes slideShow {
+            0%,22%,100%{
+                transform: translateY(0vh);
+            }
+            25%,47%{
+                transform: translateY(-50vh);
+            }
+            50%,72%{
+                transform: translateY(-100vh);
+            }
+            75%,97%{
+                transform: translateY(-150vh);
+            }
+        }
+
+        #slide-externo{
+            width: 80vw;
+            height: 50vh;
+            border: 10px solid white;
+            box-shadow: 0 0 10px black;
+            margin-left: 10vw;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .slide-interno{
+            width: 100%;
+            animation: slideShow 10s infinite cubic-bezier(.97,.31,0,.87);
+        }
+
+        .slide-interno:hover{
+            animation-play-state: paused;
+        }
+
+        .slide-interno img{
+            display: block;
+            height: 50vh;
+            width: 100%;
+            object-fit:auto,cover;
+        }
+    </style>
+</head>
+<body>
+    <h2>Animation - Slideshow</h2>
+
+    <div id="slide-externo">
+        <div class="slide-interno">
+            <img src="images/slide1.jpg" alt="#">
+            <img src="images/slide2.jpg" alt="#">
+            <img src="images/slide3.jpg" alt="#">
+            <img src="images/slide4.jpg" alt="#">
+        </div>
+    </div>
+</body>
+</html>

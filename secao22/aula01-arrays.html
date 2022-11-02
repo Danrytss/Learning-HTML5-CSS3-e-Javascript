@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="output"></div>
+    
+     <script>
+
+         /*Mostrar na tela todos os produtos disponiveis para compra. Os nomes dos produtos estão agrupados
+         em um array.*/
+
+         var produtos = new Array('caneta','lápis','tesoura','borracha','livros','regua');
+
+         produtos.push('compasso','lapis de cor','giz de cera')
+
+         var output = document.querySelector('#output');
+
+         var msg = '';
+
+         for (var i = 0; i < produtos.length; i++) {
+
+            msg += 'Produto ' + (i + 1) + ': ' + produtos[i] + '<br>'
+         }
+
+         output.innerHTML = msg ;
+
+     </script>
+</body>
+</html>

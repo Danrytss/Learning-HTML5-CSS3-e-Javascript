@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /* pedir para o usuario digitar as 04 notas e mostar uma mensagem informando se foi aprovado ou não. 
+        A nota de corte é 5*/
+
+        alert('Digite suas notas nos próximos blocos pra saber sua média')
+
+        var n1 = parseFloat(prompt('Digite sua nota em Português: '));
+        var n2 = parseFloat(prompt('Digite sua nota em Matemática: '));
+        var n3 = parseFloat(prompt('Digite sua nota em Biologia: '));
+        var n4 = parseFloat(prompt('Digite sua nota em Física: '));
+
+        var notaDeCorte = (n1+n2+n3+n4) / 4;
+
+        if (notaDeCorte > 5) {
+            //bloco true
+            alert('Parabéns, sua média é ' + notaDeCorte + " e você foi aprovado!");
+        } else {
+            //bloco false
+            alert('Infelizmente não foi dessa vez, sua média é ' + notaDeCorte + ' e você não foi aprovado!');
+        }
+    </script>
+</body>
+</html>

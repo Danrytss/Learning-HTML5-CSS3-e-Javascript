@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition, animation e keyframes</title>
+
+    <style>
+        .transition{
+            background-color:red;
+            width: 50px;
+            height: 50px;
+
+            /* transition: width,height .5s,1s cubic-bezier(.99,.23,.08,.78) .5s; */
+
+            transition-property: width, height;
+            transition-duration: .5s,1s;
+            transition-timing-function: cubic-bezier(.99,.23,.08,.78);
+            transition-delay: .5s;
+        }
+
+        .transition:hover{
+            width: 100px;
+            height: 100px;
+        }
+
+        .animation{
+            height: 50px;
+            width: 50px;
+            background-color: black;
+        }
+
+        @keyframes color{
+            0%{
+                transform: translate(0);
+            }
+            100%{
+                transform: translateX(300px);
+            }
+        }
+
+        .animation{
+            animation: color 3s infinite;
+        }
+
+            
+    </style>
+</head>
+<body>
+
+    <h2>Transition em CSS</h2>
+
+    <div class="transition"></div>
+
+    <h2>Animation</h2>
+
+    <div class="animation"></div>
+    <h2>Keyframes</h2>
+    
+</body>
+</html>

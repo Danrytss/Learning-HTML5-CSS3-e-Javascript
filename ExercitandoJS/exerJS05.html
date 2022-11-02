@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        alert("Seja bem-vindo ao sistema de calculo de notas.");
+
+        var nome = prompt("Digite seu nome:");
+
+        alert("Olá, " + nome + ", a seguir digite suas notas de acordo com a matéria pedida.");
+
+        var n1 = parseFloat(prompt("Digite sua nota de Potuguês: "));
+        var n2 = parseFloat(prompt("Digite sua nota de Matemática: "));
+        var n3 = parseFloat(prompt("Digite sua nota de História: "));
+        var n4 = parseFloat(prompt("Digite sua nota de Geografia: "));
+
+        var media = (n1 + n2 + n3 + n4) / 4;
+
+        if (media > 5) {
+         alert("Parabéns, " + nome + " ,sua média é: " + media + " e você foi APROVADO!")
+        }else {
+             alert("Infelizmente, " + nome + " ,sua média é: " + media + " e você foi REPROVADO")
+         }
+
+    // if (media > 5) {
+    //     alert("Parabéns, " + nome + " ,sua média é: " + media + " e você foi APROVADO!")
+    //    }else {
+    //        if(n1 === 0 || n2 === 0 || n3 ===0 || n4 === 0) {
+    //         alert ("Uma ou mais materias a nota foi 0")
+    //        } else {
+    //         alert("Infelizmente, " + nome + " ,sua média é: " + media + " e você foi REPROVADO")
+    //        }
+    //     }
+        
+       
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git e Github</title>
+</head>
+<body>
+    <h1>Git e Github para iniciantes</h1>
+
+<h2>Requisitos básicos</h2>
+
+<ul>
+<li>Windows, Linux ou OSX</li>
+<li>Conhecimento básico de terminal ou prompt de comando</li>
+<li>Vontade de aprender</li>
+</ul>
+
+<h2>Controle de versão<h2>
+
+<p>Sistema com a finalidade de gerenciar diferentes versões de um documento, isso permite registrar alterações em um arquivo ou conjuto de arquivos ao longo do tempo para que possamos lembrar versões especificas mais tarde.</p>
+
+<h2>Historia do git</h2>
+
+<h3>Uma Breve História do Git/h3>
+
+<p>Como muitas coisas na vida, o Git começou com um pouco de destruição criativa e uma ardente controvérsia.<p>
+
+<p>O núcleo (kernel) do Linux é um projeto de código aberto com um escopo bastante grande. A maior parte da vida da manutenção do núcleo o Linux (1991-2002), as mudanças no código eram compartilhadas como correções e arquivos. Em 2002, o projeto do núcleo do Linux começou usar uma DVCS proprietária chamada BitKeeper.</p>
+
+<p>Em 2005, a relação entre a comunidade que desenvolveu o núcleo do Linux e a empresa que desenvolveu BitKeeper quebrou em pedaços, e a ferramenta passou a ser paga. Isto alertou a comunidade que desenvolvia o Linux (e especialmente Linux Torvalds, o criador do Linux) a desenvolver a sua própria ferramenta baseada em lições aprendidas ao usar o BitKeeper. Algumas metas do novo sistema era os seguintes:</p>
+
+<ul>
+<li>Velocidade</li>
+
+<li>Projeto simples</li>
+
+<li>Forte suporte para desenvolvimento não-linear (milhares de ramos paralelos)</li>
+
+<li>Completamente distribuído</li>
+
+<li>Capaz de lidar com projetos grandes como o núcleo o Linux com eficiência (velocidade e tamanho dos dados)</li>
+</p>
+
+<p>Desde seu nascimento em 2005, Git evoluiu e amadureceu para ser fácil de usar e ainda reter essas qualidades iniciais. Ele é incrivelmente rápido, é muito eficiente com projetos grandes, e ele tem um incrível sistema de ramos para desenvolvimento não linear.</p>
+
+----------------------------------------------------------------------------------------
+
+<h2>O que é o Github?</h2>
+
+<p>Serviço de web compartilhado para projetos que utilizam o Git para versionamento.</p>
+
+<p>O GitHub é usado principalmente para armazenar repositórios, que são as "localizações" dos arquivos de um determinado projeto. Os usuários podem criar projetos com base em outros já existentes e editá-los à sua maneira — é assim, por exemplo, que múltiplos desenvolvedores se ajudam em um mesmo projeto. Desse modo, depois de editar os códigos, o programador em questão pode lançar o projeto revisado novamente na rede para que os demais também tenham a oportunidade de otimizá-lo.</p>
+
+<p>É na parte de "rede social" do GitHub que os projetos podem ser discutidos publicamente. Dessa maneira, os desenvolvedores e contribuintes do projeto podem trocar ideias e sugestões para o andamento do código em questão. Essa troca de conhecimentos é algo que, sem o GitHub, poderia ser mais difícil, uma vez que os programadores teriam de achar alguma forma alternativa de comunicação, como o e-mail.</p>
+
+----------------------------------------------------------------------------------------
+
+<h2>Instalando o Git</h2>
+
+<p><a href="https://git-scm.com/download/" targer="_blank">Download do Git </a>, é aqui onde tudo começa, baixando a versão de acordo com o OS da sua máquina usa e instalar, no caso do Linux ele já vem instalado por padrão.</p>
+
+<h2>Configurações iniciais do Git</h2>
+
+<p>O Git guarda nossos dados em três lugares, no gitconfig do sistema como um todo, o gitconfig do usuario e o gitconfig do projeto especifico daquele repositório. Quando queremos passar projetos para os nossos repositorios, usamos o gitconfig de usuario, o global.</p>
+
+<p>Então iremos configurar o usuario:</p>
+
+<pre><code>
+$ git config --global user.name "nomeDeUsuario"</code></pre>
+
+<p>Quando dermos o 'Enter', caso esteja tudo certo, não irá aparecer nada na tela</p>
+
+<pre><code>
+$ git config --global user.email "emailDoUsuario"</code></pre>
+
+<p>Quando dermos o 'Enter', caso esteja tudo certo, não irá aparecer nada na tela</p>
+
+<p>Podemos definir o nosso editor principal no git, isso possibilita informações extras no commit</p>
+
+<pre><code>$ git config --global core.editor 'code --wait' //No caso de utilizar o Visual Code</code></pre>
+
+
+<h2>Inicializando um repositório</h2>
+
+<p>Podemos criar uma pasta através do CLI do nosso sistema ou diretamente dentro do bash do Git, usando o comando mkdir + nomeDaPasta e 'Enter". No windows usamos o camando dir + nomeDaPasta/</p>]
+
+<p>Feito isso iremos usamos o comando <pre><code>$ git init</code></pre>. Isso irá criar uma pasta com todos os dados desse repositório, configurações, branch padrão, hookies(gatilhos para certas ações durante o projeto).</p>
+
+
+<h2>Ciclo de vida dos status dos arquivos</h2>
+
+<p>O git separa em 4 estados bem definidos como os arquivos vao ser</p>
+
+<p>Untracked: O arquivo foi adicionado ao repo, mas ainda não foi visto pelo gir, ogit não reconhece dentro do seu repo em nenhuma vers~~ao desse arquivo  </p>
+<p>Unmodified: Aqui o arquivo esta sendo mostrado ao git, mas não foi modificado</p>
+<p>Modified: O arquivo foi modificado</p>
+<p>Staged: Momento em que o arquivo vai ter sua versão criada, basicamente está dizendo 'olha no momento que esta versão estiver fechada, leve esses arquivos'</p> 
+
+
+<h2>Commit</h2>
+
+<p>Um commit adiciona as alterações mais recentes do código-fonte ao repositório, tornando essas alterações parte da revisão principal do repositório.</p>
+
+<p>É importante resaltar que os commits nos sistemas de versão são mantidos do repositório  <b>indefinidamente</b>.</p>
+
+<p>Assim quando outros usuários fizerem uma alteração ou check-up no repositório, eles receberão a última versão confirmada.</p>
+
+<p>Os sistema de controle de versão permitem reverter facilmente para versões anteriores. Nesse contetxo, um <b>um commit dentro de um sistema de controlr de versão dé protegido</b>, pois é facilmente revertido, mesmo após o commit ter sido aplicado.</p>
+
+<h2>Como fazer Commit no Git</h2>
+
+<p>Para "commitar" no git, basta executar o comando:</p>
+
+<pre><code>$ git commit -m "mensagem do commit"</code></pre>
+
+<p>Isso também presspõe que os arquivos no diretório atual foram testados da seguinte forma:</p>
+
+<pre><code>$ git add *</code></pre>
+
+<p>O comando acima adiciona todos os arquivos no diretório de trabalho a serem testados para o git commit.</p>
+
+<p>Depois que o commit foi aplicado, a última etapa é enviar o commit para o repositório, no caso abaixo nomeado 'geek, para o branch master</p>
+
+<pre><code>$ git push geek master</code></pre>
+
+<p>Você também pode obtar por um atalho e adicionar todos os arquivos não testados e fazer um commit ao memsmo tempo com o comando:</p>
+
+<pre><code>$ git commit -a -m "commit message"</code></pre>
+
+<h2>Branch</h2>
+
+<p>Uma ramificação no git é um ponteiro para as alterações feitas nos arquivos do projeto. É útil em situações nas quais você deseja adiconar um novo recurso ou corrigir um erro, gerando uma nova ramificação daquele arquivo, garantido que aquele código instável não seja misturado nos arquivos do projeto principal. Depois de concluido, podemos mesclar a raamificação com a principal, geralmente chamada de master.</p>
+
+<h3>Criando uma branch local</h3>
+
+<p>Após criar o <i>branch</i> é preciso fazer o <i>checkout</i> para acessar o <i>branch</i>: </p>
+
+<pre><code>$ gir checkout branch-001</code></pre>
+
+<p>Ou ainda podemos criar um novo <i>branch</i> e acessa-lo usando o comando:</p>
+
+<pre><code>$ git checkout -b branch-001</code></pre>
+
+<p>Para verificar o novo <i>branch</i> digite:</p>
+
+<pre><code>$ git status</code></pre>
+
+<h2>Logs</h2>
+
+<p>Para saber se um arquivos foi comitado e para verficar outros commmits, anteriores, basta rodar o seguinte comando:</p>
+
+<pre><code>$ git log</code></pre>
+
+<p>Este comando permite retornar uma listagem dos últimos commits com o hash de identificação, a data e também o usuário que foi responsável pelo commit.</p>
+
+<pre><code>$ git log --decorate</code></pre>
+
+<p>O comando acima permite saber de qual branch para qual branch foi enviado o arquivo</p>
+
+<pre><code>$ git log --author="nome"</code></pre>
+
+<p>Esse permite filtrar por autor do commit.</p>
+
+<pre><code>$ git shortlog</pre></code>
+
+<p>Mostra os autores e quais commits fizeram naquele projeto/repositorio.</p>
+
+<pre><code>$ git shortlog -sn</pre></code>
+
+<p>Mostra a quantidade de commits e o nome da pessoa que fex esses commits.</p>
+
+<pre><code>$ git log --graph</pre></code>
+
+<p>Mostra de forma gráfica o que esta acontecendo no repositório.</p>
+
+<h2>Diff</h2>
+
+<p>O <b>git diff</b> é um comando <b>Git</b> que, quando executado realiza uma função de comparação nas fontes de dados <b>Git</b>. Essaas fontes d dados podem ser commits, branchs, arquivos e outros.
+
+<h2>Desfazendo coisas</h2>
+
+
+<h2>Criando e adicionando uma chave SSH</h2>
+
+
+<p>O SSH é um protocolo de rede que peremite que a conexão com determinados servidores por meio de uma comunicação criptografada, trazendo mais segurança para as transações de dados.</p>
+
+<p>O Github permite que criemos chaves SSH para gerenciarmos tudo de maneira remota, com segurança e sem precisar fornecer nome de usuario e senha pessoal toda vez que quisermos acessar.</p>
+
+<p>No site do Github há a documentação para essa configuração, nesse <a href="https://docs.github.com/pt/authentication/connecting-to-github-with-ssh" target="_blank">link<a/>.</p>
+
+<p>Mas vou fazer um passo a passo rápido.</p>
+
+<h3>Chaves já existentes</h3>
+
+<p>Primeiramente é precisamos saber se já existem chaves SSH na máquina. Por padrão o nome delas devem ser um desses: "id_rsa.pub", "id_ecdsa.pub" ou "id_ed25519.pub".</p>
+
+<p>Para listar as existentes, usamos o comando:</p>
+
+<pre><code>$ ls -al ~/.ssh</code></pre>
+
+<p>Caso apareça um erro ~/.sh ná existe, siginifica que nã há chaves existentes na máquina</p>
+
+<h3>Gerando as chaves SSH</h3>
+
+<p>Primeiramente vamos abrir o Git BASH e digitar o seguinte comando</p>
+
+<pre><code>$ ssh-keygen -t ed25519 -C "seu-email@exemplo.com" </code></pre>
+
+<p>Obs: Caso esteja usando um sistema legado que não é compativel com o algoritmo ed25519,use:</p>
+
+<pre><code>$ ssh-agent -t rsa -b 4096 -C "seu-email@exemplo.com" </code></pre>
+
+<p>Isso irá criar uma nova chave SSH, usando o e-mail fornecido como etiqueta</p>
+
+<pre><code>Generating public/private algorithm key pair.</code></pre>
+
+<ol>
+<li>Quando aparecer a solicitação "Enter a file in witch to save the key" (Insira um arquivo no qual salvar a chave), pressione Enter. O local padrão do arquivo será aceito.</li> <ul>
+
+<li><pre><code>Enter a file in which to save the key (/c/Users/you/.ssh/id_algorithm):[Press enter]</code></pre></li>
+</ul>
+
+<li>Digite uma frase secreta segura no prompt.</li>
+<ul>
+<li><pre><code>Enter passphrase (empty for no passphrase): [Type a passphrase]</code></pre></li>
+<li><pre><code>Enter same passphrase again : [Type passphrase again]</code></pre></li>
+</ul>
+
+</ol>
+
+
+
+
+
+
+
+
+
+
+<footer>
+
+<h2>Fontes</h2>
+
+<ul>
+<li><a href="https://blog.geekhunter.com.br/o-que-e-commit-e-como-usar-commits-semanticos/#O_que_e_Commit" target="_blank">Geek Hunter - Commit e commits semânticos</a></li>
+
+<li><a href="https://fullcycle.com.br/git-e-github/" target="_blank">Fullcycle - Git e Github</a></li>
+
+<li><a href="https://www.udemy.com/course/git-e-github-para-iniciantes/" target="_blank">Udemy - Curso Git e Github para Iniciantes</a></li>
+
+<li><a href="https://www.atlassian.com/br/git/tutorials/saving-changes/git-commit" target="_blank">Atlassian - Git-Commit</a></li>
+
+<li><a href="https://receitasdecodigo.com.br/devops/git-o-que-e-um-branch" target="_blank">Receitas de código - O que é Branch?</a></li>
+</ul>
+
+</footer>
+</body>
+</html>

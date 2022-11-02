@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercicio de fixação com operadores</h1>
+
+    <script>
+
+        alert('Bem-vindo ao teste');
+        var nome = prompt('Olá, qual o seu nome?');
+        alert('Olá ' + nome + ', ' + 'seja bem-vindo, preciso que digite alguns números no próximos campos.');
+
+        //pedir para o usuario digitar um numero
+        var number1 = parseFloat(prompt('Digite um número: '));
+        //pedir para o ususario digitar um segundo numero
+        var number2 = parseFloat(prompt('Digite um segundo número: '));
+        /*mostra em um alert o seguinte texto:
+        o resto da divisão (number1) por (number2) é: (resultado);
+        */
+       alert('O resultado do resto da divisão de ' + number1 + ' por ' + number2 + ' é: ' + (number1 % number2));
+        /*
+        mostra em um alert o seguinte texto:
+        o numero (number1) levado à (number2) é: (resultado);
+        */
+       alert('O resultado da exponenciação de ' + number1 + ' elevado a ' + number2 + ' é: ' + (number1 ** number2));
+        
+    </script>
+</body>
+</html>

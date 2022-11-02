@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Tempo de programção</h1>
+
+    <p>Descubra se você é Júnior, Pleno ou Sênior</p>
+
+    Há quantos você está na area: <input type="number" name="tempo" id="tempo"> anos.
+
+    <input type="button" value="Verificar" onclick="calcular()">
+
+    <div id="res"></div>
+    
+    <script>
+        let tempo = document.querySelector('#tempo');
+        let res = window.document.querySelector('#res');
+
+        function escreve(){
+            var tempo = document.querySelector('#tempo');
+            res.innerHTML = tempo;
+        }
+
+        if (tempo <= 2) {
+            res.innerHTML = ('Acho que você ainda é Júnior, continue firme na sua jornada!!')
+        } else if (tempo >= 2 && tempo <= 4) {
+            res.innerHTML = ('Olha só, eu diria que você é Pleno, está quase lá!')
+    
+        } else {
+            // res.innerHTML = ('Nice, temos um Sênior aqui, me ensine todo o seu conhecimento, Ó grande sábio!')
+            
+    }
+
+    </script>
+</body>
+</html>

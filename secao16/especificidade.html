@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu CSS não funciona</title>
+
+    <style>
+
+        #unico{ /*Tem a mais alta especificidade dentro do css, pois é um item unico, como se fosse um rg ou um cpf, existe apenas um*/
+            color: blue;
+        }
+
+        p.destaque{ /*Seria algo como um 2° lugar, esta abaixo do id e acima do atributo classe*/
+            color: orange;
+        }
+
+        .destaque{ /*imagine que seja um apelido dado a alguem, tornando mais fácil de identifica-lo*/
+            color: red;
+        }
+
+        p{
+            color: green !important; /*O !important ele sobrescreve todos os demais não importanto o nivel de especificidade*/
+        }
+
+        .table{
+            width:100%;
+            border-collapse: collapse;
+            margin: 0 0 2em 0;
+            text-align: left;
+        }
+
+        .table thead th {
+            border: .5px solid black;
+            background-color: rgba(187, 187, 212,0.5);
+        }
+
+        .table tbody td{
+            border: 1px solid white;
+            padding: .65em;
+        }
+
+        .table tbody tr:first-child td{
+            border-top: 2px solid #807e7e;
+        
+        }
+
+        .table tbody tr:last-child td{
+            border-bottom: 2px solid #807e7e; ;
+        }
+
+        .table tbody tr:nth-child(even) {
+            background-color: #e2e4e6;;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Meu CSS não funciona</h1>
+
+    <p class="destaque">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin scelerisque arcu ut tincidunt scelerisque. Suspendisse gravida at elit hendrerit elementum. Proin gravida ultricies quam, id consequat mauris varius vitae. Donec rutrum orci at vehicula tristique. In et orci nisi. Curabitur augue leo, aliquet in facilisis quis, molestie non diam. Donec pretium varius est sed egestas. Sed sed urna quis ipsum commodo convallis. In auctor finibus iaculis. Donec lobortis risus ac lorem dictum, eget ultrices augue fringilla.</p>
+
+    <p class="destaque" id="unico">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin scelerisque arcu ut tincidunt scelerisque. Suspendisse gravida at elit hendrerit elementum. Proin gravida ultricies quam, id consequat mauris varius vitae. Donec rutrum orci at vehicula tristique. In et orci nisi. Curabitur augue leo, aliquet in facilisis quis, molestie non diam. Donec pretium varius est sed egestas. Sed sed urna quis ipsum commodo convallis. In auctor finibus iaculis. Donec lobortis risus ac lorem dictum, eget ultrices augue fringilla.</p>
+
+    <p class="destaque">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin scelerisque arcu ut tincidunt scelerisque. Suspendisse gravida at elit hendrerit elementum. Proin gravida ultricies quam, id consequat mauris varius vitae. Donec rutrum orci at vehicula tristique. In et orci nisi. Curabitur augue leo, aliquet in facilisis quis, molestie non diam. Donec pretium varius est sed egestas. Sed sed urna quis ipsum commodo convallis. In auctor finibus iaculis. Donec lobortis risus ac lorem dictum, eget ultrices augue fringilla.</p>
+
+    <h2>Calcular a especificidade</h2>
+
+    <table class="table">
+
+    <thead>
+        <tr>
+            <th></th>
+            <th>Estilo inline</th>
+            <th>ID #</th>
+            <th>Atributos e pseudoclasses</th>
+            <th>Tags e psudoelementos</th>
+            <th>Resultado</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>*</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0000</td>
+        </tr>
+
+        <tr>
+            <td>p</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0001</td>
+        </tr>
+
+        <tr>
+            <td>.destaque</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0010</td>
+        </tr>
+
+        <tr>
+            <td>p.destaque</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0011</td>
+        </tr>
+
+        <tr>
+            <td>p[lang]</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0011</td>
+        </tr>
+
+        <tr>
+            <td>#unico</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0100</td>
+        </tr>
+
+        <tr>
+            <td>#nav ul li a</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>3</td>
+            <td>0103</td>
+        </tr>
+
+        <tr>
+            <td>p:first-child</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0011</td>
+        </tr>
+
+        <tr>
+            <td>p::first-letter</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>2</td>
+            <td>0002</td>
+        </tr>
+        
+    </tbody>
+
+    </table>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de IMC</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table{
+            border-collapse: collapse;
+            width: 60%;
+            margin:auto;
+            background: #49bf9d ;
+        }
+
+        td{
+            border: 1px solid black;
+            text-align: center;
+            padding: 4px;
+        }
+
+        th{
+            background: rgb(20, 153, 142);
+            border: 1px solid black;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <h1>Desafio</h1>
+
+    <h2>Tabela de IMC</h2>
+
+    <table class="table-altenate">
+
+        <thead>
+            <tr>
+                <th>Classificação</th>
+                <th>IMC</th>
+            </tr>
+        </thead>
+
+        <tfoot>
+            <tr>
+                <td colspan="2">Fonte: <a href="https://www.tuasaude.com/imc/" target="_blank">Tua Saúde</a></td>
+            </tr>
+
+        </tfoot>
+
+        <tbody>
+            <tr>
+                <td>Muito abaixo de peso</td>
+                <td>16 a 16,9 kg/m2</td>
+            </tr>
+
+            <tr>
+                <td>Abaixo do peso</td>
+                <td>17 a 18,4 kg/m2</td>
+            </tr>
+
+            <tr>
+                <td><b>Peso normal</b></td>
+                <td><b>18,5 a 24,9 kg/m2</b></td>
+            </tr>
+
+            <tr>
+                <td>Acima do peso</td>
+                <td>25 a 29,9 kg/m2</td>
+            </tr>
+
+            <tr>
+                <td>Obesidade Grau I</td>
+                <td>30 a 34,9 kg/m2</td>
+            </tr>
+
+            <tr>
+                <td>Obesidade Grau II</td>
+                <td>35 a 40 kg/m2</td>
+            </tr>
+
+            <tr>
+                <td>Obesidade III</td>
+                <td>Maior que 40kg/m2</td>
+            </tr>
+
+
+        </tbody>
+    </table>
+
+    <script>
+
+        /*Criar uma função que retorne o índice de massa corporal(IMC);
+        Criar uma outra função que receba este índice e retorne uma string 
+        informando sua classificação.*/
+        
+        (function () {
+            'use strict'
+
+            function calcularIMC(peso, altura) {
+                return peso / (altura * altura);
+            }
+
+            function classificaIMC(imc) {
+                var msg = '';
+                if(imc <= 16.9){
+                    return 'Muito abaixo do peso'
+                }else if (imc<= 18.4) {
+                    return 'Abaixo do peso' 
+                }
+            }
+        })()
+    </script>
+</body>
+</html>

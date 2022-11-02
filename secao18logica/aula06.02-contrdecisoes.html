@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //fazer jogador1 digitar um numero
+        var jogador1 = parseFloat(prompt('Digite um número aleatório '));
+
+        //fazer jogador2 digitar um numero
+
+        var jogador2 = parseFloat(prompt('Digite um número aleatório: '))
+
+        // se forem iguais, mostrar "Empate"
+        if (jogador1 == jogador2) {
+            alert('Empate');
+        } else {
+            var sorteio = parseInt(Math.random() * 2);
+
+            if (sorteio == 0) {
+                if (jogador1 < jogador2){
+                    alert('O jogador1 venceu!');
+                }else {
+                    alert('O jogador2 Venceu!');
+                }
+            }else {
+                if (jogador1 > jogador2) {
+                    alert('O jogador1 venceu!!');
+                }else {
+                    alert('O jogador2 venceu!');
+                }
+            }
+        }
+
+        // sortear um número entre 0 e 1
+
+        // se o numero sortedao for 0, ganha quem escolher o numero MENOR
+
+        // se o numero sorteado for 1, ganha quem escolher o numero MAIOR
+
+        /*if (condição){
+            true
+        }-condição simples*/
+
+        /*if(condição){
+            true
+        }else {
+            false
+        }*/
+    </script>
+</body>
+</html>

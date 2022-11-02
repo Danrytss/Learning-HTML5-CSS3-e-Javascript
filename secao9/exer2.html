@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            font-family: sans-serif;
+        }
+
+        a{
+            display: inline-block;
+            margin: 10px;
+            position: relative;
+        }
+
+        a img {
+            width: 100%;
+            display: block;
+        }
+
+        a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            transition: all .5s;
+        }
+
+        a:hover:before{
+            background: rgba(0,0,0,.5);         
+        }
+
+        a:after{
+            opacity: 0;
+        }
+
+        a:hover:after{
+            content: 'Veja +';
+            font-size: 20px;
+            display: block;
+            position: absolute;
+            border: 1px solid rgb(224, 214, 214);
+            color: white;
+            top: 50%;
+            left: 50%;
+            padding: 10px 20px;
+            transform: translate(-50%, -50%);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    
+    <section>
+
+        <article>
+            <a href="/secao9/fulls/01.jpg" target="_blank">
+                <img src="/secao9/thumbs/01.jpg" alt="bike station street">
+            </a>
+        </article>
+
+        
+        <article>
+            <a href="#">
+                <img src="/secao9/thumbs/02.jpg" alt="bike station street">
+                </a>
+        </article>
+
+        
+        <article>
+            <a href="#">
+                   <img src="/secao9/thumbs/03.jpg" alt="bike station street">
+                </a>
+            </article>
+
+        
+        <article>
+            <a href="#">
+                <img src="/secao9/thumbs/04.jpg" alt="bike station street">
+            </a>
+        </article>
+
+        
+        <article>
+            <a href="#">
+                <img src="/secao9/thumbs/05.jpg" alt="bike station street">
+            </a>
+        </article>
+
+        
+        <article>
+            <a href="#">
+                <img src="/secao9/thumbs/06.jpg" alt="bike station street">
+            </a>
+        </article>
+    </section>
+</body>
+</html>

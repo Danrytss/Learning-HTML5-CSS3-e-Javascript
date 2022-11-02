@@ -1,0 +1,128 @@
+body {
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: whitesmoke;
+    margin: 2000px;
+    padding: 1000px;
+
+
+}
+
+.cabeca {
+
+    background-image: url(/secao3/ProjetoCSS_inicio/imagens/bg-3.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
+}
+
+.section-content {
+
+    background-color: white;
+    margin: 15px;
+    overflow: auto;
+    padding-top: 10px;
+    
+}
+
+.card {
+
+    width: 32%;
+    float: left;
+    margin-left: 7px;
+    
+}
+
+.card img {
+
+    width: 100%;
+    display: block;
+}
+
+.card p {
+
+    background-color: rgba(0,0,0,0.5);
+    color:white;
+    margin: 0;
+    padding: 6px;
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.cabeca-content {
+
+    text-align: center;
+    color: azure;
+    margin-top: 200px;
+    font-size: 30px;
+    text-shadow: 2px 2px gray;
+    
+    
+}
+
+.cabeca-content h1 {
+
+    text-transform: uppercase;
+}
+
+.cabeca-content p {
+
+    font-size: 15px;
+    display: inline-block;
+    background-color: rgba(0,0,0,.5);
+    border-bottom: 1px solid white;
+    width: 230px;
+    padding: 5px;
+
+}
+
+main {
+
+    width: 80%;
+    margin: auto;
+    padding: auto;
+}
+
+.pe {
+
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    text-shadow: 2px 2px gray;
+    background-color: white;
+    margin-top: 10px;
+
+}
+
+.cabeca li {
+
+    display: inline-block;
+    list-style: none;
+    margin: 5px 3px 5px 5px;
+    padding: 0px;
+    border: 1px solid5 black;
+
+}
+
+.cabeca li a {
+
+    background:rgba(0,0,0,0.1);
+    display: block;
+    padding: 6px;
+    color:black;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+
+.cabeca li a:hover {
+    background:rgba(0,0,0,0.3);
+    
+}
+
+.cabeca ul {
+
+    text-align: right;
+}
+

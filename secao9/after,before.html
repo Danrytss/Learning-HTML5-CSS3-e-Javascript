@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before e after</title>
+
+    <style>
+
+        .first{
+            border: 3px solid red;
+            padding: 25px;
+        }
+
+        .first::before{
+            content: "(texto before) ";
+        }
+
+        .first::after{
+            content: " (texto after)";
+        }
+
+        a::selection{
+            color:aquamarine;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="first">Texto principal da div</div>
+
+    <article>
+        <h3>
+            Titulo
+        </h3>
+        <p>paragrafo <a href="#">Apenas um link <b>negrito</b></a></p>
+        <p>paragrafo <a href="#">Apenas um link <b>negrito</b></a></p>
+        <p>paragrafo <a href="#">Apenas um link <b>negrito</b></a></p>
+    </article>
+
+    <hr>
+
+    <ul>
+        <li><a href="#">Fake link</a></li>
+        <li><a href="#">Fake link</a></li>
+        <li><a href="http://lascou.com">External link</a></li>
+        <li><a href="../Jogo de adivinhação/index.html" title="game">Internal link</a></li>
+        <li><a href="../secao8-strata/images/avatar.jpg" title="img">Internal link</a></li>
+    </ul>
+    
+</body>
+</html>

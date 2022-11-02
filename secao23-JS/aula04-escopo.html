@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        var x = 0; //escopo global
+        var y;
+
+        function mostraX(){
+            var  x = 10;
+            var y = 20
+            console.log('Mostra x dentro: ', x);
+            console.log('Mostra y dentro: ', y);
+            //escopo local
+        }
+
+        mostraX();
+
+        console.log('Mostra x fora: ' ,x)
+        console.log('Mostra y fora: ' ,y)
+    </script>
+</body>
+</html>
