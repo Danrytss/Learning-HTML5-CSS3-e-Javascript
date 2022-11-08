@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <button onclick="iniciar()">Iniciar</button>
+    <button onclick="soma()">+</button>
+    <button onclick="subtracao()">-</button>
+    <button onclick="multiplicacao()">X</button>
+    <button onclick="divisao()">/</button>
+    <button onclick="limpar()">Limpar</button>
+
+    <div id="output"></div>
+
+    <script>
+
+        
+
+        function iniciar () {
+            let n1 = parseFloat(prompt('Digite um número: '));
+            output.innerHTML = escreve(n1);
+        }
+    
+        escreve();
+
+        function escreve () {
+            var output = document.querySelector('#output');
+            output.innerHTML = n1;
+        }
+
+        function soma(){
+            var n = parseFloat(prompt('Digite o número a qual deseja somar: '));
+            n1 += n;
+            escreve();
+        }
+
+        function subtracao(){
+            var n = parseFloat(prompt('Digite o número a qual deseja subtrair: '));
+            n1 -= n;
+            escreve();
+        }
+
+        function multiplicacao(){
+            var n = parseFloat(prompt('Digite o número a qual deseja multiplicar: '));
+            n1 *= n;
+            escreve();
+        }
+
+        function divisao(){
+            var n = parseFloat(prompt('Digite o número a qual deseja dividir: '));
+            n1 /= n;
+            escreve();
+        }
+
+        function limpar(){
+            var mensagem = '';
+            output.innerHTML = mensagem;
+        }
+
+           
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        var year = 1004;
+
+        while (year <= 2022) {
+
+            if (!(year % 100 === 0) || (year % 400 === 0)) {
+                document.write(year + " - é bissexto! " + "<br>")
+            }else {
+                document.write(year + " - não é bissexto " + "<br>")
+            }
+
+            year += 4;
+        }
+    </script>
+</body>
+</html>
