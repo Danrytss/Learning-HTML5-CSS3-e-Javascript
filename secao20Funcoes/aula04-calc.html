@@ -8,18 +8,24 @@
 </head>
 <body>
     
+    <button onclick="Iniciar('Iniciar')">Iniciar</button>
     <button onclick="Iniciarcalculo('+')">+</button>
     <button onclick="Iniciarcalculo('-')">-</button>
     <button onclick="Iniciarcalculo('*')">*</button>
     <button onclick="Iniciarcalculo('/')">/</button>
+    <button onclick="Limpar('Limpar')">Limpar</button>
 
     <div id="output"></div>
 
     <script>
 
-        var n2 = parseFloat(prompt('Digite um número: '));
+        let mensagem = "";
 
-        escreve(n2)
+        function Iniciar() {
+            var n2 = parseFloat(prompt("Digite um número:"));
+
+            escreve(n2);
+        }
 
         function Iniciarcalculo(simbolo) {
             var n1 =document.querySelector('#output').textContent;
@@ -63,6 +69,11 @@
             }
 
             return numeroCalculado;
+        }
+
+        function Limpar () {
+            mensagem = "";
+            output.innerHTML = mensagem;
         }
        
     </script>
