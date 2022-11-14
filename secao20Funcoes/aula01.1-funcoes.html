@@ -20,18 +20,19 @@
 
     <script>
 
-        
+        let mensagem = "";
 
         function iniciar () {
-            let n1 = parseFloat(prompt('Digite um número: '));
-            output.innerHTML = escreve(n1);
+            var n1 = parseFloat(prompt('Digite um número: '));
+            
+            escreve(n1);
         }
     
-        escreve();
+        escreve(mensagem);
 
-        function escreve () {
+        function escreve (mensagem) {
             var output = document.querySelector('#output');
-            output.innerHTML = n1;
+            output.innerHTML = mensagem;
         }
 
         function soma(){
@@ -59,7 +60,7 @@
         }
 
         function limpar(){
-            var mensagem = '';
+            mensagem = '';
             output.innerHTML = mensagem;
         }
 
