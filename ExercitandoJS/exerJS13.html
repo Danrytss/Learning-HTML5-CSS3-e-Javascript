@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Tabuada até 1000</h2>
+    
+
+    <button onclick="iniciarTabuada()">Iniciar</button>
+    <button onclick="limpar()">Limpar tela</button>
+
+    <div class="output"></div>
+
+    <script>
+
+        function iniciarTabuada() {
+
+            var n = parseFloat(prompt("Digite o número pra ver a tabuada até 1000"));
+
+            limpar()
+
+            var i = 0;
+
+            while(i <= 1000) {
+                mensagem += n + ' X ' + i + " = " + (n*i) + '<br>'; 
+                i++
+            }
+
+            output.innerHTML = mensagem;
+        }
+
+        function limpar() {
+            mensagem = '';
+            output.innerHTML = mensagem;
+        }
+
+        var output = document.querySelector(".output");
+        var mensagem = ''
+    </script>
+</body>
+</html>
+outu
