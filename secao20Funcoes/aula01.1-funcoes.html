@@ -21,11 +21,9 @@
     <script>
 
         let mensagem = "";
-        let n1 = 0;
-        let n2 = 0;
 
         function iniciar () {
-            n1 = parseFloat(prompt('Digite um número: '));
+            var n1 = parseFloat(prompt('Digite um número: '));
             
             escreve(n1);
 
@@ -57,7 +55,6 @@
 
                 case '/':
                 n1 *= n2;
-                break;
             }
 
             escreve();
