@@ -8,18 +8,24 @@
 </head>
 <body>
     
+    <button onclick="Iniciar('Iniciar')">Iniciar</button>
     <button onclick="Iniciarcalculo('+')">+</button>
     <button onclick="Iniciarcalculo('-')">-</button>
     <button onclick="Iniciarcalculo('*')">*</button>
     <button onclick="Iniciarcalculo('/')">/</button>
+    <button onclick="Limpar('Limpar')">Limpar</button>
 
     <div id="output"></div>
 
     <script>
 
-        var n2 = parseFloat(prompt('Digite um número: '));
+        let mensagem = "";
 
-        escreve(n2)
+        function Iniciar() {
+            var n2 = parseFloat(prompt("Digite um número:"));
+
+            escreve(n2);
+        }
 
         function Iniciarcalculo(simbolo) {
             var n1 =document.querySelector('#output').textContent;
@@ -28,12 +34,7 @@
 
             var n2 = parseFloat(prompt('Digite outro número: '));
 
-           try {
-                var msg = calcular(simbolo, n1, n2);
-           } catch (e) {
-               alert(e);
-               return;               
-           }
+            var msg = calcular(simbolo, n1, n2);
 
             escreve(mensagem);
         }
@@ -46,41 +47,47 @@
 
         function calcular(simbolo, n1, n2){
 
-            if (simbolo !== '+' && simbolo !== '-' && simbolo !== '*' && simbolo !== '/') {
-                throw new Error('Digite um operador válido');
-                
-            }
+            // if (simbolo !== '+' || simbolo !== '-' || simbolo !== '*' || simbolo !== '/') {
+            //     alert('Escolha um operador válido')
+            //     return 0;
+            // }
 
-            if (isNaN(n1) || isNaN(n2)) {
-                throw new Error("Apenas números");
-               
-            }
+            // if (isNaN(n1) || isNaN(n2)) {
+            //     alert ('Escolha um número válido')
+            // }
 
             var numeroCalculado = null;
 
             switch(simbolo){
+                
 
                 case '+':
-                numeroCalculado = n1 += n2;
+                numeroCalculado = n1 + n2;
                 break;
 
                 case '-':
-                numeroCalculado = n1 -= n2;
+                numeroCalculado = n1 - n2;
                 break;
 
                 case '*':
-                numeroCalculado = n1 *= n2;
+                numeroCalculado = n1 * n2;
                 break;
 
                 case '/':
-                numeroCalculado = n1 /= n2;
+                numeroCalculado = n1 / n2;
                 break;
             }
 
             return numeroCalculado;
         }
+
+        function Limpar () {
+            mensagem = "";
+            output.innerHTML = mensagem;
+        }
        
     </script>
+
 
 </body>
 </html>
