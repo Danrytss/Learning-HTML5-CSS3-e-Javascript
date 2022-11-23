@@ -36,7 +36,7 @@
 
             var msg = calcular(simbolo, n1, n2);
 
-            escreve(mensagem);
+            escreve(msg);
         }
 
         function escreve (mensagem) {
@@ -47,14 +47,14 @@
 
         function calcular(simbolo, n1, n2){
 
-            // if (simbolo !== '+' || simbolo !== '-' || simbolo !== '*' || simbolo !== '/') {
-            //     alert('Escolha um operador válido')
-            //     return 0;
-            // }
+            if (simbolo !== '+' && simbolo !== '-' && simbolo !== '*' && simbolo !== '/') {
+                 alert('Escolha um operador válido')
+                 return 0;
+            }
 
-            // if (isNaN(n1) || isNaN(n2)) {
-            //     alert ('Escolha um número válido')
-            // }
+            if (isNaN(n1) || isNaN(n2)) {
+                alert ('Escolha um número válido')
+            }
 
             var numeroCalculado = null;
 
