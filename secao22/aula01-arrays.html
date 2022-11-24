@@ -15,18 +15,27 @@
          /*Mostrar na tela todos os produtos disponiveis para compra. Os nomes dos produtos estão agrupados
          em um array.*/
 
+         /*Permite criar uma unica variavel com diversos valores*/
          var produtos = new Array('caneta','lápis','tesoura','borracha','livros','regua');
 
+         /*permite adicionar mais valores a uma array já criada anteriormente*/
          produtos.push('compasso','lapis de cor','giz de cera')
 
+         /*o document.query.selector('') faz com o que eu possa acessar o html atraves do id criada no html 
+         e adicionar informarções nesse html */
          var output = document.querySelector('#output');
+
+         //output.innerHTML = produtos.toString(); - toString() transforma o conteudo das arrays em string
 
          var msg = '';
 
-         for (var i = 0; i < produtos.length; i++) {
+         /*esse loop vai fazer com que todos os itens do array sejam mostrados no html*/
+          for (var i = 0; i < produtos.length; i++) {
 
-            msg += 'Produto ' + (i + 1) + ': ' + produtos[i] + '<br>'
-         }
+             msg += 'Produto ' + (i +1) + ' : ' + produtos[i] + '<br>'
+
+        }
+        
 
          output.innerHTML = msg ;
 

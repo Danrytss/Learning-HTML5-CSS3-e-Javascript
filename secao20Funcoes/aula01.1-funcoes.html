@@ -10,10 +10,10 @@
 
 
     <button onclick="iniciar()">Iniciar</button>
-    <button onclick="calcular('+')">+</button>
-    <button onclick="calcular('-')">-</button>
-    <button onclick="calcular('*')">X</button>
-    <button onclick="calcular('/')">/</button>
+    <button onclick="soma('+')">+</button>
+    <button onclick="subtracao('-')">-</button>
+    <button onclick="multiplicacao('*')">X</button>
+    <button onclick="divi('/')">/</button>
     <button onclick="limpar()">Limpar</button>
 
     <div id="output"></div>
@@ -36,55 +36,55 @@
             output.innerHTML = mensagem;
         }
 
-        function calcular (simbolo) {
-            n2 = parseFloat(prompt("digite um número: "));
+        // function calcular (simbolo) {
+        //     n2 = parseFloat(prompt("digite um número: "));
 
-            switch (simbolo) {
+        //     switch (simbolo) {
 
-                case '+':
-                n1 += n2;
-                break;
+        //         case '+':
+        //         n1 += n2;
+        //         break;
 
-                case '-':
-                n1 -= n2;
-                break;
+        //         case '-':
+        //         n1 -= n2;
+        //         break;
 
-                case '*':
-                n1 *= n2;
-                break;
+        //         case '*':
+        //         n1 *= n2;
+        //         break;
 
-                case '/':
-                n1 *= n2;
-                break;
-            }
+        //         case '/':
+        //         n1 *= n2;
+        //         break;
+        //     }
 
-            escreve(mensagem);
+        //     escreve(mensagem);
 
+        // }
+
+        function soma(){
+            var n = parseFloat(prompt('Digite o número a qual deseja somar: '));
+            n1 += n;
+            escreve();
         }
 
-        // function soma(){
-        //     var n = parseFloat(prompt('Digite o número a qual deseja somar: '));
-        //     n1 += n;
-        //     escreve();
-        // }
+        function subtracao(){
+            var n = parseFloat(prompt('Digite o número a qual deseja subtrair: '));
+            n1 -= n;
+            escreve();
+        }
 
-        // function subtracao(){
-        //     var n = parseFloat(prompt('Digite o número a qual deseja subtrair: '));
-        //     n1 -= n;
-        //     escreve();
-        // }
+        function multiplicacao(){
+            var n = parseFloat(prompt('Digite o número a qual deseja multiplicar: '));
+            n1 *= n;
+            escreve();
+        }
 
-        // function multiplicacao(){
-        //     var n = parseFloat(prompt('Digite o número a qual deseja multiplicar: '));
-        //     n1 *= n;
-        //     escreve();
-        // }
-
-        // function divisao(){
-        //     var n = parseFloat(prompt('Digite o número a qual deseja dividir: '));
-        //     n1 /= n;
-        //     escreve();
-        // }
+        function divisao(){
+            var n = parseFloat(prompt('Digite o número a qual deseja dividir: '));
+            n1 /= n;
+            escreve();
+        }
 
         function limpar(){
             mensagem = '';
