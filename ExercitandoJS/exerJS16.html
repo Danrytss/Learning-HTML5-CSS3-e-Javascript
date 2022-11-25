@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="book"></div>
+    <div id="author"></div>
+
+    <script>
+
+        var livros = ['Maus','1984','OZOB','O livro dos cinco anéis','Morte súbita']
+
+        livros.push('Nárnia','A revolução dos bichos','IT: A coisa','Deuses Americanos')
+
+        var autor = new Array ('Art Spiegelman','Leonel Caldela & Deive Pazos','George Orwell','C.S. Lewis','Willian Gibson')
+
+        autor.push('Musashi','Stephen King','Neil Gaiman')
+
+
+        var book = document.querySelector('#book')
+
+        //book.innerHTML = livros.toString();
+
+        var author = document.querySelector('#author');
+
+        //author.innerHTML = autor.toString();
+
+        var msg = '';
+
+        for(var i = 0; i < livros.length; i++)  {
+            msg += 'Titulo ' + (i + 1) + ': ' + livros[i] + '<br>'
+        }
+
+        for(var i = 0; i < autor.length;i++) {
+            msg += 'Escritor ' + (i + 1) + ': ' + autor[i] + '<br>'
+        }
+
+        book.innerHTML = msg;
+
+
+    </script>
+</body>
+</html>
